@@ -1,29 +1,21 @@
-# gRPC Hello World
+# Context HelloWorld with gRPC Go
 
-Follow these setup to run the [quick start][] example:
+项目中大部分内容出自 grpc-go 项目中的 HelloWorld 示例代码。
 
- 1. Get the code:
+做了简单的修复：
 
-    ```console
-    $ go get google.golang.org/grpc/examples/helloworld/greeter_client
-    $ go get google.golang.org/grpc/examples/helloworld/greeter_server
-    ```
+- 在 client 中插入 metadata
+- 在 server 中打印超时时间和 key-val 内容
 
- 2. Run the server:
+## 构建
 
-    ```console
-    $ $(go env GOPATH)/bin/greeter_server &
-    ```
+```bash
+make
+```
 
- 3. Run the client:
+## 运行
 
-    ```console
-    $ $(go env GOPATH)/bin/greeter_client
-    Greeting: Hello world
-    ```
-
-For more details (including instructions for making a small change to the
-example code) or if you're having trouble running this example, see [Quick
-Start][].
-
-[quick start]: https://grpc.io/docs/languages/go/quickstart
+```bash
+./server
+./client
+```
