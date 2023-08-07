@@ -1,2 +1,4 @@
 server
 client
+client_with_otel
+server_with_otel
